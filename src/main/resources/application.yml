@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: VolunteerService
+  profiles.active: dev
+  # Discovery Server Access
+
+  cloud:
+    consul:
+      discovery:
+        healthCheckPath: /vs/health
+        healthCheckInterval: 15s
+        
+management:
+  security:
+    enabled: false
+  health:
+    consul:
+      enabled: false 
+      
+server:
+   contextPath: /vs
+        
